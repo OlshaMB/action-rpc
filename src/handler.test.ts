@@ -13,14 +13,18 @@ describe("actioHandler test", () => {
                 }
             };
         },
-        "POST postForm": async (_p: { id: string }, _body: Record<string, string>) => {
-            // if (!body.password || body.password != "password") return badRequestResponse();
+        "POST postForm": async (_p: { id: string }, body: Record<string, string>) => {
+            if (!body.password || body.password != "password") return {
+                status: 400,
+                statusText: "Bad request.",
+                body: "Bad request."
+            };
             return {
                 status: 200,
                 statusText: "Ok",
                 body: "Ok"
             };
-        }
+        },
     });
     // TODO: Write more tests
     it("get", async () => {
