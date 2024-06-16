@@ -21,22 +21,22 @@ export const actionHandler =
                 }
             }
             const { body: responseBody, ...responseInit } = await action(Object.fromEntries(url.searchParams.entries()), body, request);
-            let encodedResponseBody: BodyInit
+            let encodedResponseBody: BodyInit;
             if (
                 typeof responseBody == "object" &&
                 !(
                     responseBody instanceof ReadableStream ||
                     responseBody instanceof Blob ||
                     responseBody instanceof ArrayBuffer ||
-                    responseBody.buffer instanceof ArrayBuffer ||
+                    // responseBody.buffer instanceof ArrayBuffer || //TODO: Research this and make a test
                     // responseBody.buffer instanceof SharedArrayBuffer ||
                     responseBody instanceof FormData ||
                     responseBody instanceof URLSearchParams
                 )
             ) {
-                encodedResponseBody = JSON.stringify(responseBody)
+                encodedResponseBody = JSON.stringify(responseBody);
             } else {
-                encodedResponseBody = responseBody
+                encodedResponseBody = responseBody;
             }
-            return new Response(encodedResponseBody, responseInit)
+            return new Response(encodedResponseBody, responseInit);
         };
