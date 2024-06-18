@@ -4,11 +4,14 @@
         "moduleResolution": "node16",
         "module": "node16",
         "strict": true,
-        "noEmit": true
+        "declaration": true,
+        "declarationDir": "dist",
     },
     "exclude": [
         "dist",
         "node_modules",
-        "vitest.config.ts"
+        "vitest.config.ts",
+        "sandbox.ts",
+        "src/**/*.test.ts"
     ]
 }
