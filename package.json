@@ -16,7 +16,7 @@
     "test": "vitest",
     "lint": "eslint -c eslint.config.js"
   },
-  "files": ["dist/*"],
+  "files": ["dist/*", "LICENSE", "README.md", "SPEC.md"],
   "main": "dist/index.js",
   "types": "dist/index.d.ts"
 }
