@@ -1,6 +1,6 @@
-import { service } from "./src/builder.js";
-import { client, jsonBodyEncoder } from "./src/client.js";
-import { ActionReturnType, actionHandler } from "./src/index.js";
+import { service } from "./dist/builder.js";
+import { client, jsonBodyEncoder } from "./dist/client.js";
+import { ActionReturnType, actionHandler } from "./dist/index.js";
 //server
 const getUser = async (p: { id: string }, _body: null, _req: Request) => {
 	return {
