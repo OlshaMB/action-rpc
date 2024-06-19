@@ -1,6 +1,6 @@
 {
   "name": "action-rpc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "devDependencies": {
     "@eslint/js": "^9.4.0",
@@ -16,7 +16,12 @@
     "test": "vitest",
     "lint": "eslint -c eslint.config.js"
   },
-  "files": ["dist/*", "LICENSE", "README.md", "SPEC.md"],
+  "files": [
+    "dist/*",
+    "LICENSE",
+    "README.md",
+    "SPEC.md"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts"
 }
